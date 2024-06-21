@@ -10,29 +10,60 @@
 #ds
   opacity: 0.5
 
+#p-b
+  display: flex
+  align-items: center
+  gap: 10px
+
+#progress-container
+  width: 200px
+  border-radius: 100px
+  height: 5px
+  background-color: #dddddd86
+  position: relative
+
+#bar
+  height: 100%
+  background-color: #ffffff
+  border-radius: 100px
+  width: 0
+  position: absolute
+  top: 0
+  left: 0
+
+
 .p-i
   display: flex
+  flex-direction: column
   gap: 10px
   width: 200vh
   //border: 2px solid white
   justify-content: center
-  button
+  align-items: center
+  .btn button
     background: transparent
     border-radius: 100%
     //height: 60px
     border: none
     cursor: pointer
     img
-      //background: white
+      background: #ffffff71
       border-radius: 100%
       padding: 5px
       transition: all ease 0.5s
       &:hover
-        background: white
+        background:#ffffff
 
 .f-i
   width: 40vh
-  //background: green
+  display: flex
+  gap: 10px
+  justify-content: center
+  align-items: center
+  img
+    background: #ffffff91
+    padding: 5px
+    border-radius: 100px
 
 .a-i
   padding: 10px
@@ -48,4 +79,34 @@
     background: #272b35
   img
     border-radius: 3px
+
+input[type=range]
+  -webkit-appearance: none // Remove a aparência padrão do WebKit
+  appearance: none // Remove a aparência padrão //
+  width: 100px // Define a largura da barra de volume //
+  height: 5px // Define a altura da barra de volume //
+  background-color: #dddddd // Cor de fundo da barra de volume //
+  border-radius: 100px
+  outline: none // Remove o contorno ao focar //
+  cursor: pointer // Muda o cursor ao passar por cima //
+
+  &::-webkit-slider-thumb
+    -webkit-appearance: none // Remove a aparência padrão do WebKit para o polegar //
+    appearance: none // Remove a aparência padrão do polegar //
+    width: 15px // Largura do polegar //
+    height: 15px // Altura do polegar //
+    background-color: #ffffff // Cor do polegar //
+    border-radius: 50% // Deixa o polegar redondo //
+    cursor: pointer // Muda o cursor ao passar por cima //
+
+
+  &::-moz-range-thumb
+    width: 15px // Largura do polegar para Firefox //
+    height: 15px // Altura do polegar para Firefox //
+    background-color: #ffffff // Cor do polegar para Firefox //
+    border: none // Remove a borda do polegar //
+    border-radius: 50% // Deixa o polegar redondo para Firefox //
+    cursor: pointer // Muda o cursor ao passar por cima para Firefox //
+
+
 

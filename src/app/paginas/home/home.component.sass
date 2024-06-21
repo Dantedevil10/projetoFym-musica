@@ -3,7 +3,7 @@
   flex-direction: column
   margin-left: 230px
 main
-  background: linear-gradient(to bottom ,#2c3252,#020303 ,#000000,#000000 )
+  background: linear-gradient(to bottom ,#1e292b,#000000ee ,#000000ee,#000000ee,#000000ee )
   width: 100%
   flex-grow: 1
   overflow: auto
@@ -15,13 +15,17 @@ main
   width: 260px
   padding: 10px
   border-radius: 10px
-  background: linear-gradient(to bottom ,#28324b,#212f46 ,#1f2c3f )
+  background: #363636be
   //box-shadow: 1px 1px 9px black
 .c-c-2
   width: 140px
   padding: 10px
   border-radius: 10px
-  background: linear-gradient(to bottom ,#28324b,#212f46 ,#1f2c3f )
+  transition: all ease 0.4s
+  transform: all ease 0.4s
+  background: none
+  &:hover
+    background: #363636be
 .c-1
   margin-left: 80px
   min-width: 80vh
@@ -39,6 +43,9 @@ main
   display: flex
   align-items: center
   gap: 30px
+  cursor: pointer
+  img
+    border-radius: 5px
   span
     display: flex
     flex-direction: column
@@ -47,7 +54,10 @@ main
   display: flex
   align-items: baseline
   flex-direction: column
+  cursor: pointer
   gap: 10px
+  img
+    border-radius: 5px
   span
     display: flex
     flex-direction: column

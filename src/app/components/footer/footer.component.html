@@ -9,13 +9,31 @@
     </div>
 
     <div class="p-i">
-      <button><img src="assets/ElementosdeTestes/foward.png" width="20px" alt=""></button>
-      <button><img src="assets/ElementosdeTestes/botao-play.png" width="50px" alt=""></button>
-      <button><img src="assets/ElementosdeTestes/next.png" width="20px" alt=""></button>
+      <audio (timeupdate)="updateProgress()" #ps src="assets/ElementosdeTestes/taca.mp3"></audio>
+
+      <span class="btn">
+        <button><img src="assets/ElementosdeTestes/foward.png" width="17px" alt=""></button>
+        <button (click)="playPause()"><img src="assets/ElementosdeTestes/botao-play.png" width="25px" alt=""></button>
+        <button><img src="assets/ElementosdeTestes/next.png" width="17px" alt=""></button>
+      </span>
+
+      <span id="p-b">
+        <p>{{currentTime}}</p>
+
+        <div id="progress-container" (mousedown)="onMouseDown($event)"
+        (mousemove)="onMouseMove($event)"
+        (mouseup)="onMouseUp($event)">
+
+          <div id="bar" [style.width]="progress + '%'"></div>
+        </div>
+
+        <p>{{duration}}</p>
+      </span>
     </div>
 
     <div class="f-i">
-      
+      <img src="assets/ElementosdeTestes/volume.png" width="20px" alt="">
+      <input id="vol" type="range" min="0" max="100" [(ngModel)]="volume" (input)="setVolume()">
     </div>
 
   </footer>
