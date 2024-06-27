@@ -8,16 +8,20 @@ import { Component,ViewChild,ElementRef,AfterViewInit } from '@angular/core';
 export class FooterComponent {
 
   @ViewChild('ps') ps!: ElementRef<HTMLAudioElement>
+  @ViewChild('progress2') p2!: ElementRef<HTMLDivElement>
   currentTime: string = '0:00';
   duration: string = '0:00';
   progress: number = 0;
-  isDragging: boolean = false;
   volume: number = 100;
+  playorpause:string='assets/ElementosdeTestes/botao-play.png'
 
   ngAfterViewInit() {
     const audio = this.ps.nativeElement;
     audio.onloadedmetadata = () => {
       this.duration = this.formatTime(audio.duration);
+    };
+    audio.onended = () => {
+      this.playorpause = 'assets/ElementosdeTestes/botao-play.png';
     };
   }
 
@@ -25,8 +29,10 @@ export class FooterComponent {
     const audio = this.ps.nativeElement
     if(audio.paused){
       audio.play();
+      this.playorpause='assets/ElementosdeTestes/pause.png';
     }else{
-      audio.pause();
+      audio.pause()
+      this.playorpause='assets/ElementosdeTestes/botao-play.png';
     }
   }
   setVolume() {
@@ -40,27 +46,13 @@ export class FooterComponent {
   }
   seekBar(event: MouseEvent) {
     const audio = this.ps.nativeElement;
-    const rect = (event.target as HTMLElement).getBoundingClientRect();
-    const offsetX = event.clientX - rect.left;
-    const barWidth = rect.width;
-    const seekTime = (offsetX / barWidth) * audio.duration;
-    audio.currentTime = seekTime;
-  }
-  onMouseDown(event: MouseEvent) {
-    this.isDragging = true;
-    this.seekBar(event);
-  }
-  onMouseMove(event: MouseEvent) {
-    if (this.isDragging) {
-      this.seekBar(event);
+    const p2 = this.p2.nativeElement;
+    const seekTime = (event.offsetX / p2.offsetWidth) * audio.duration;
+    if (isFinite(seekTime)) {
+      audio.currentTime = seekTime;
     }
   }
-  onMouseUp(event: MouseEvent) {
-    if (this.isDragging) {
-      this.isDragging = false;
-    }
-  }
- formatTime(seconds: number): string {
+  formatTime(seconds: number): string {
     const minutes: number = Math.floor(seconds / 60);
     const secs: number = Math.floor(seconds % 60);
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
