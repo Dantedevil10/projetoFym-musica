@@ -1,4 +1,5 @@
-import { Component,ViewChild,ElementRef,AfterViewInit } from '@angular/core';
+import { Component,ViewChild,ElementRef} from '@angular/core';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,49 +8,69 @@ import { Component,ViewChild,ElementRef,AfterViewInit } from '@angular/core';
 })
 export class FooterComponent {
 
-  @ViewChild('ps') ps!: ElementRef<HTMLAudioElement>
-  @ViewChild('progress2') p2!: ElementRef<HTMLDivElement>
+  @ViewChild('p2') p2!: ElementRef<HTMLDivElement>
   currentTime: string = '0:00';
   duration: string = '0:00';
   progress: number = 0;
   volume: number = 100;
   playorpause:string='assets/ElementosdeTestes/botao-play.png'
 
-  ngAfterViewInit() {
-    const audio = this.ps.nativeElement;
-    audio.onloadedmetadata = () => {
-      this.duration = this.formatTime(audio.duration);
-    };
-    audio.onended = () => {
-      this.playorpause = 'assets/ElementosdeTestes/botao-play.png';
-    };
+  currart:any;
+  currtilt:any;
+  currcov:any;
+  selectSong:number=1;
+
+  player = new Audio()
+
+  dados:any;
+
+  constructor(private api:ApiService){
+    this.api.Data().subscribe((data)=>{this.dados=data
+      this.Tocar(this.dados)
+    })
+
+    this.player.addEventListener('timeupdate', () => this.updateProgress());
+    this.player.addEventListener('loadedmetadata', () => this.updateDuration());
+    this.player.addEventListener('ended', () => this.resetPlayer());
+
   }
 
+  Tocar(dados:any){
+    this.player.src=this.dados[this.selectSong].SongSrc
+    this.currart=this.dados[this.selectSong].Artist
+    this.currcov=this.dados[this.selectSong].Cover
+    this.currtilt=this.dados[this.selectSong].Title
+  }
+
+  updateDuration() {
+    this.duration = this.formatTime(this.player.duration);
+  }
+  resetPlayer() {
+    this.playorpause = 'assets/ElementosdeTestes/botao-play.png';
+    this.progress = 0;
+    this.currentTime = '0:00';
+  }
   playPause(){
-    const audio = this.ps.nativeElement
-    if(audio.paused){
-      audio.play();
+    if(this.player.paused){
+      this.player.play();
       this.playorpause='assets/ElementosdeTestes/pause.png';
     }else{
-      audio.pause()
+      this.player.pause()
       this.playorpause='assets/ElementosdeTestes/botao-play.png';
     }
   }
   setVolume() {
-    const audio = this.ps.nativeElement;
-    audio.volume = this.volume / 100;
+  this.player.volume = this.volume / 100;
   }
   updateProgress() {
-    const audio = this.ps.nativeElement;
-    this.currentTime = this.formatTime(audio.currentTime);
-    this.progress = (audio.currentTime / audio.duration) * 100;
+    this.currentTime = this.formatTime(this.player.currentTime);
+    this.progress = (this.player.currentTime / this.player.duration) * 100;
   }
   seekBar(event: MouseEvent) {
-    const audio = this.ps.nativeElement;
     const p2 = this.p2.nativeElement;
-    const seekTime = (event.offsetX / p2.offsetWidth) * audio.duration;
+    const seekTime = (event.offsetX / p2.offsetWidth) * this.player.duration;
     if (isFinite(seekTime)) {
-      audio.currentTime = seekTime;
+      this.player.currentTime = seekTime;
     }
   }
   formatTime(seconds: number): string {

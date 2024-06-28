@@ -1,0 +1,244 @@
+{
+  "musics":[
+    {
+      "id":1,
+      "Title":"Numb",
+      "Artist":"Linkin Park",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/8/83/Linkin_park-meteora_a.jpg",
+      "SongSrc":"assets/musics/Linkin Park/Linkin Park - Numb.mp3"
+    },
+    {
+      "id":2,
+      "Title":"In The End",
+      "Artist":"Linkin Park",
+      "Year":"2000",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/2/23/Linkin_Park_Hybrid_Theory.jpg",
+      "SongSrc":"assets/musics/Linkin Park/Linkin Park -  In The End.mp3"
+    },
+    {
+      "id":3,
+      "Title":"Numb/Encore",
+      "Artist":"Linkin Park & Jay-Z",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/0/0b/Jay_Z_Linkin_Park_Collision_Course.jpg",
+      "SongSrc":"assets/musics/Linkin Park/Numb  Encore.mp3"
+    },
+    {
+      "id":4,
+      "Title":"Faint",
+      "Artist":"Linkin Park",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/8/83/Linkin_park-meteora_a.jpg",
+      "SongSrc":"assets/musics/Linkin Park/Linkin Park - Faint.mp3"
+    },
+    {
+      "id":5,
+      "Title":"Complicated",
+      "Artist":"Avril Lavigne",
+      "Year":"2002",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/0/0b/Let_Go_%28Avril_Lavigne%29.png",
+      "SongSrc":"assets/musics/Avril Lavigne/Avril Lavigne - Complicated (Lyrics).mp3"
+    },
+    {
+      "id":6,
+      "Title":"Smile",
+      "Artist":"Avril Lavigne",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/9/94/Goodbye_Lullaby.png",
+      "SongSrc":"assets/musics/Avril Lavigne/Avril Lavigne - Smile (Lyrics).mp3"
+    },
+    {
+      "id":7,
+      "Title":"What The Hell",
+      "Artist":"Avril Lavigne",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/9/94/Goodbye_Lullaby.png",
+      "SongSrc":"assets/musics/Avril Lavigne/Avril Lavigne - What The Hell.mp3"
+    },
+    {
+      "id":8,
+      "Title":"Hail To The King",
+      "Artist":"Avenged Sevenfold",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/1/19/Hail-to-the-king-capa.jpg",
+      "SongSrc":"assets/musics/Avenged sevenfold/Hail to the King.mp3"
+    },
+    {
+      "id":9,
+      "Title":"This Means War",
+      "Artist":"Avenged Sevenfold",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/1/19/Hail-to-the-king-capa.jpg",
+      "SongSrc":"assets/musics/Avenged sevenfold/This Means War.mp3"
+    },
+    {
+      "id":10,
+      "Title":"Best Of You",
+      "Artist":"Foo Fighters",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/7/7c/Foo_Fighters_-_In_Your_Honor.jpg",
+      "SongSrc":"assets/musics/Foo fighters/Foo Fighters - Best Of You.mp3"
+    },
+    {
+      "id":11,
+      "Title":"The Pretender",
+      "Artist":"Foo Fighters",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/f/f2/Foo_Fighters_-_Echoes%2C_Silence%2C_Patience_%26_Grace.jpg",
+      "SongSrc":"assets/musics/Foo fighters/Foo Fighters - The Pretender.mp3"
+    },
+    {
+      "id":12,
+      "Title":"Learn To Fly",
+      "Artist":"Foo Fighters",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/8/8b/Foo_Fighters_-_There_Is_Nothing_Left_to_Lose.jpg",
+      "SongSrc":"assets/musics/Foo fighters/Learn to Fly.mp3"
+    },
+    {
+      "id":13,
+      "Title":"Boulevard of Broken Dreams",
+      "Artist":"Green Day",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/3/32/AmericanIdiot.jpg",
+      "SongSrc":"assets/musics/Green day/Green Day - Boulevard of Broken Dreams (Lyrics).mp3"
+    },
+    {
+      "id":14,
+      "Title":"Ghosts",
+      "Artist":"Mike Shinoda",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/c/c6/Post_Traumatic.jpg",
+      "SongSrc":"assets/musics/Mike Shinoda/Mike Shinoda - Ghosts.mp3"
+    },
+    {
+      "id":15,
+      "Title":"Promisses i Cant Keep",
+      "Artist":"Mike Shinoda",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/c/c6/Post_Traumatic.jpg",
+      "SongSrc":"assets/musics/Mike Shinoda/Promises I Cant Keep (Official Video) - Mike Shinoda.mp3"
+    },
+    {
+      "id":16,
+      "Title":"Remember The Name",
+      "Artist":"Fort Minor",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/f/fa/Fort_minor_the_rising_tied.jpg",
+      "SongSrc":"assets/musics/Mike Shinoda/Fort Minor - Remember The Name (OFFICIAL Video) HD.mp3"
+    },
+    {
+      "id":17,
+      "Title":"About a Girl",
+      "Artist":"Nirvana",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Nirvana-Bleach.jpg/220px-Nirvana-Bleach.jpg",
+      "SongSrc":"assets/musics/Nirvana/Nirvana - About A Girl (MTV Unplugged).mp3"
+    },
+    {
+      "id":18,
+      "Title":"Lithium",
+      "Artist":"Nirvana",
+      "Year":"2003",
+      "Cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrpBQl01_1nG2TO90_s2Pz7MXzZ0nBGdTDw&s",
+      "SongSrc":"assets/musics/Nirvana/Nirvana - Lithium.mp3"
+    },
+    {
+      "id":19,
+      "Title":"Smells Like Teen Spirit",
+      "Artist":"Nirvana",
+      "Year":"2003",
+      "Cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrpBQl01_1nG2TO90_s2Pz7MXzZ0nBGdTDw&s",
+      "SongSrc":"assets/musics/Nirvana/Smells Like Teen Spirit.mp3"
+    },
+    {
+      "id":20,
+      "Title":"Ignorance",
+      "Artist":"Paramore",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/7/72/Riot.JPG",
+      "SongSrc":"assets/musics/Paramore/Paramore Ignorance [OFFICIAL VIDEO].mp3"
+    },
+    {
+      "id":21,
+      "Title":"Misery Bussines",
+      "Artist":"Paramore",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/7/72/Riot.JPG",
+      "SongSrc":"assets/musics/Paramore/Paramore Misery Business [OFFICIAL VIDEO].mp3"
+    },
+    {
+      "id":22,
+      "Title":"That's What You Get",
+      "Artist":"Paramore",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/7/72/Riot.JPG",
+      "SongSrc":"assets/musics/Paramore/Paramore Thats What You Get [OFFICIAL VIDEO].mp3"
+    },
+    {
+      "id":23,
+      "Title":"Vortex",
+      "Artist":"Jinjer",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/b/b3/Jinjer_-_Wallflowers.png",
+      "SongSrc":"assets/musics/Jinjer/JINJER - Vortex (Official Video)  Napalm Records.mp3"
+    },
+    {
+      "id":24,
+      "Title":"Cloud Factory",
+      "Artist":"Jinjer",
+      "Year":"2003",
+      "Cover":"https://www.spirit-of-metal.com/cover.php?id_album=278791",
+      "SongSrc":"assets/musics/Jinjer/Jinjer - Cloud Factory (OFFICIAL MUSIC VIDEO).mp3"
+    },
+    {
+      "id":25,
+      "Title":"Monster",
+      "Artist":"Skillet",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Skillet-Monster.jpg/220px-Skillet-Monster.jpg",
+      "SongSrc":"assets/musics/Skillet/Skillet-Monster (Lyrics Video).mp3"
+    },
+    {
+      "id":26,
+      "Title":"Awake And Alive",
+      "Artist":"Skillet",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/9/95/Skilletawake2009albumart.jpg",
+      "SongSrc":"assets/musics/Skillet/Skillet - Awake and Alive.mp3"
+    },
+    {
+      "id":27,
+      "Title":"Hero",
+      "Artist":"Skillet",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/en/9/95/Skilletawake2009albumart.jpg",
+      "SongSrc":"assets/musics/Skillet/Skillet - Hero (Official Video).mp3"
+    },
+    {
+      "id":28,
+      "Title":"Aerials",
+      "Artist":"System Of A Down",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/1/18/220px-SystemofaDownToxicityalbumcover.jpg",
+      "SongSrc":"assets/musics/System Of A Down/Aerials.mp3"
+    },
+    {
+      "id":29,
+      "Title":"Chop Suey",
+      "Artist":"System Of A Down",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/1/18/220px-SystemofaDownToxicityalbumcover.jpg",
+      "SongSrc":"assets/musics/System Of A Down/Chop Suey.mp3"
+    },
+    {
+      "id":30,
+      "Title":"B.Y.O.B.",
+      "Artist":"System Of A Down",
+      "Year":"2003",
+      "Cover":"https://upload.wikimedia.org/wikipedia/pt/1/18/220px-SystemofaDownToxicityalbumcover.jpg",
+      "SongSrc":"assets/musics/System Of A Down/B.Y.O.B..mp3"
+    }
+  ]
+}

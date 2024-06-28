@@ -1,15 +1,15 @@
-<div>
+<div *ngIf="dados">
   <footer id="footer">
+
     <div class="a-i">
-      <img src="assets/musics/meteora.jpg" width="50px" alt="">
-      <span>
-        <p><b>Numb</b></p>
-        <p id="ds">Linkin Park</p>
+      <img src={{currcov}} width="50px" alt="">
+      <span class="titles">
+        <p><b>{{currtilt}}</b></p>
+        <p id="ds">{{currart}}</p>
       </span>
     </div>
 
     <div class="p-i">
-      <audio (timeupdate)="updateProgress()" #ps src="assets/musics/taca.mp3"></audio>
 
       <span class="btn">
         <button><img src="assets/ElementosdeTestes/foward.png" width="17px" alt=""></button>
@@ -18,14 +18,15 @@
       </span>
 
       <span id="p-b">
-        <p>{{currentTime}}</p>
+        <p><b>{{currentTime}}</b></p>
 
-        <div id="progress-container" #progress2 (click)="seekBar($event)">
+        <div id="progress-container" #p2 (click)="seekBar($event)">
           <div id="bar" [style.width]="progress + '%'"></div>
         </div>
 
-        <p>{{duration}}</p>
+        <p><b>{{duration}}</b></p>
       </span>
+
     </div>
 
     <div class="f-i">

@@ -1,88 +1,88 @@
 <div class="conteudo">
   <main class="main">
 
-    <h1>Destaques De Hoje</h1>
+    <h1>HighLights</h1>
     <section class="c-1">
 
       <div class="c-c-1">
         <div class="c-o-c-1">
-          <img src="assets/musics/meteora.jpg" width="90px" alt="qweer">
+          <img src={{dados[ale1].Cover}} width="90px" alt="qweer">
           <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
+            <p id="st">{{dados[ale1].Title}}</p>
+            <p id="ds">{{dados[ale1].Artist}}</p>
           </span>
         </div>
       </div>
-      <div class="c-c-1">
+      <div class="c-c-1" >
         <div class="c-o-c-1">
-          <img src="assets/musics/meteora.jpg" width="90px" alt="qweer">
+          <img src={{dados[ale2].Cover}} width="90px" alt="qweer">
           <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
+            <p id="st">{{dados[ale2].Title}}</p>
+            <p id="ds">{{dados[ale2].Artist}}</p>
           </span>
         </div>
       </div>
-      <div class="c-c-1">
+      <div class="c-c-1" >
         <div class="c-o-c-1">
-          <img src="assets/musics/meteora.jpg" width="90px" alt="qweer">
+          <img src={{dados[ale3].Cover}} width="90px" alt="qweer">
           <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
+            <p id="st">{{dados[ale3].Title}}</p>
+            <p id="ds">{{dados[ale3].Artist}} </p>
           </span>
         </div>
       </div>
+
 
     </section>
     <h1>Home</h1>
     <section class="c-2">
 
-      <div class="c-c-2">
+      <div class="c-c-2" *ngFor="let dado of dados.slice(0,5) ">
         <div class="c-o-c-2">
-          <img src="assets/musics/meteora.jpg" width="140px" alt="qweer">
+          <img src={{dado.Cover}} width="140px" alt="qweer">
           <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
-          </span>
-        </div>
-      </div>
-      <div class="c-c-2">
-        <div class="c-o-c-2">
-          <img src="assets/musics/meteora.jpg" width="140px" alt="qweer">
-          <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
-          </span>
-        </div>
-      </div>
-      <div class="c-c-2">
-        <div class="c-o-c-2">
-          <img src="assets/musics/meteora.jpg" width="140px" alt="qweer">
-          <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
-          </span>
-        </div>
-      </div>
-      <div class="c-c-2">
-        <div class="c-o-c-2">
-          <img src="assets/musics/meteora.jpg" width="140px" alt="qweer">
-          <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
-          </span>
-        </div>
-      </div>
-      <div class="c-c-2">
-        <div class="c-o-c-2">
-          <img src="assets/musics/meteora.jpg" width="140px" alt="qweer">
-          <span>
-            <p id="st">Numb</p>
-            <p id="ds">Meteora </p>
+            <p id="st">{{dado.Title}}</p>
+            <p id="ds">{{dado.Artist}}</p>
           </span>
         </div>
       </div>
 
     </section>
+    <h1>Top Played</h1>
+    <section class="c-2">
+
+      <div class="c-c-2" *ngFor="let dado of dados.slice(6,11) ">
+        <div class="c-o-c-2">
+          <img src={{dado.Cover}} width="140px" alt="qweer">
+          <span>
+            <p id="st">{{dado.Title}}</p>
+            <p id="ds">{{dado.Artist}}</p>
+          </span>
+        </div>
+      </div>
+
+    </section>
+    <h1>Recomended</h1>
+    <section class="c-2">
+
+      <div class="c-c-2" *ngFor="let dado of dados.slice(11,16) ">
+        <div class="c-o-c-2">
+          <img src={{dado.Cover}} width="140px" alt="qweer">
+          <span>
+            <p id="st">{{dado.Title}}</p>
+            <p id="ds">{{dado.Artist}}</p>
+          </span>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="f-m">
+      <div class="itens">
+        <p>All Rigths Reserved</p>
+        <p>© 2024 Fym Industries</p>
+      </div>
+    </footer>
 
   </main>
 </div>
