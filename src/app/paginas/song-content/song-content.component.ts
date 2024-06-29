@@ -36,6 +36,7 @@ export class SongContentComponent {
 
   reloadPage(id:number){
     this.router.navigate(['/song-content', id])
+    window.scrollTo(0,0)
   }
   getSong(id:number){
     //const id = Number(this.route.snapshot.paramMap.get('id'));
