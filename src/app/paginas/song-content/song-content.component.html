@@ -1,0 +1,59 @@
+<div class="content">
+
+  <main>
+
+    <div class="img-con" *ngIf="song">
+      <img src={{song.Cover}} width="180px" height="180px" alt="">
+      <span>
+        <h1>{{song.Artist}}</h1>
+        <p><b>{{song.Title}}</b></p>
+        <p><b>{{song.Year}}</b></p>
+      </span>
+    </div>
+
+    <section  class="c">
+
+      <div class="r-c" >
+        <h1>More of {{song?.Artist}}</h1><br>
+
+        <div class="c-c" *ngFor="let item of morecomend">
+          <span class="c-i" *ngIf="item.Artist === song?.Artist" (click)="reloadPage(item.id)">
+            <img src={{item.Cover}} width="80px" height="80px" alt="">
+            <span>
+              <p><b>{{item.Title}}</b></p>
+              <p>{{item.Artist}}</p>
+            </span>
+            <p><b>{{item.Year}}</b></p>
+          </span>
+        </div>
+
+      </div>
+
+    </section><br>
+
+    <section>
+      <h1 id="f-t">Maybe Of Your Interest</h1>
+      <div class="c-2" >
+        <div class="c-c-2" *ngFor="let dado of morecomend.slice(0,5) ">
+          <div class="c-o-c-2">
+            <a (click)="reloadPage(dado.id)">
+              <img src={{dado.Cover}} width="140px" height="140px" alt="qweer">
+              <span>
+                <p id="st">{{dado.Title}}</p>
+                <p id="ds">{{dado.Artist}}</p>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="f-m">
+      <div class="itens">
+        <p>All Rigths Reserved</p>
+        <p>© 2024 Fym Industries</p>
+      </div>
+    </footer>
+
+  </main>
+
+</div>

@@ -4,30 +4,38 @@
     <h1>HighLights</h1>
     <section class="c-1">
 
-      <div class="c-c-1">
+      <div class="c-c-1" *ngIf="dados">
         <div class="c-o-c-1">
-          <img src={{dados[ale1].Cover}} width="90px" alt="qweer">
+          <a routerLink="/song-content/{{dados[ale1]?.id}}">
+            <img src={{dados[ale1]?.Cover}} width="90px" alt="qweer">
+          </a>
           <span>
-            <p id="st">{{dados[ale1].Title}}</p>
-            <p id="ds">{{dados[ale1].Artist}}</p>
+            <p id="st">{{dados[ale1]?.Title}}</p>
+            <p id="ds">{{dados[ale1]?.Artist}}</p>
           </span>
         </div>
       </div>
+
       <div class="c-c-1" >
         <div class="c-o-c-1">
-          <img src={{dados[ale2].Cover}} width="90px" alt="qweer">
+          <a routerLink="/song-content/{{dados[ale2]?.id}}">
+            <img src={{dados[ale2]?.Cover}} width="90px" alt="qweer">
+          </a>
           <span>
-            <p id="st">{{dados[ale2].Title}}</p>
-            <p id="ds">{{dados[ale2].Artist}}</p>
+            <p id="st">{{dados[ale2]?.Title}}</p>
+            <p id="ds">{{dados[ale2]?.Artist}}</p>
           </span>
         </div>
       </div>
+
       <div class="c-c-1" >
         <div class="c-o-c-1">
-          <img src={{dados[ale3].Cover}} width="90px" alt="qweer">
+          <a routerLink="/song-content/{{dados[ale3]?.id}}">
+            <img src={{dados[ale3]?.Cover}} width="90px" alt="qweer">
+          </a>
           <span>
-            <p id="st">{{dados[ale3].Title}}</p>
-            <p id="ds">{{dados[ale3].Artist}} </p>
+            <p id="st">{{dados[ale3]?.Title}}</p>
+            <p id="ds">{{dados[ale3]?.Artist}} </p>
           </span>
         </div>
       </div>
@@ -39,11 +47,13 @@
 
       <div class="c-c-2" *ngFor="let dado of dados.slice(0,5) ">
         <div class="c-o-c-2">
-          <img src={{dado.Cover}} width="140px" alt="qweer">
-          <span>
-            <p id="st">{{dado.Title}}</p>
-            <p id="ds">{{dado.Artist}}</p>
-          </span>
+          <a routerLink="/song-content/{{dado.id}}">
+            <img src={{dado.Cover}} width="140px" alt="qweer">
+            <span>
+              <p id="st">{{dado.Title}}</p>
+              <p id="ds">{{dado.Artist}}</p>
+            </span>
+          </a>
         </div>
       </div>
 
@@ -52,13 +62,15 @@
     <section class="c-2">
 
       <div class="c-c-2" *ngFor="let dado of dados.slice(6,11) ">
-        <div class="c-o-c-2">
-          <img src={{dado.Cover}} width="140px" alt="qweer">
-          <span>
-            <p id="st">{{dado.Title}}</p>
-            <p id="ds">{{dado.Artist}}</p>
-          </span>
-        </div>
+        <a routerLink="/song-content/{{dado.id}}">
+          <div class="c-o-c-2">
+            <img src={{dado.Cover}} width="140px" alt="qweer">
+            <span>
+              <p id="st">{{dado.Title}}</p>
+              <p id="ds">{{dado.Artist}}</p>
+            </span>
+          </div>
+        </a>
       </div>
 
     </section>
@@ -66,13 +78,15 @@
     <section class="c-2">
 
       <div class="c-c-2" *ngFor="let dado of dados.slice(11,16) ">
-        <div class="c-o-c-2">
-          <img src={{dado.Cover}} width="140px" alt="qweer">
-          <span>
-            <p id="st">{{dado.Title}}</p>
-            <p id="ds">{{dado.Artist}}</p>
-          </span>
-        </div>
+        <a routerLink="/song-content/{{dado.id}}">
+          <div class="c-o-c-2">
+            <img src={{dado.Cover}} width="140px" alt="qweer">
+            <span>
+              <p id="st">{{dado.Title}}</p>
+              <p id="ds">{{dado.Artist}}</p>
+            </span>
+          </div>
+        </a>
       </div>
 
     </section>

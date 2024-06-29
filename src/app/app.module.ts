@@ -8,13 +8,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './paginas/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SongContentComponent } from './paginas/song-content/song-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    SongContentComponent
   ],
   imports: [
     BrowserModule,
