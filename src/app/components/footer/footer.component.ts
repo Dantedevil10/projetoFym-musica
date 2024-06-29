@@ -1,6 +1,7 @@
 import { Component,ViewChild,ElementRef} from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -18,16 +19,19 @@ export class FooterComponent {
   currart:any;
   currtilt:any;
   currcov:any;
-  selectSong:number=1;
+
+  selectSong:number=0;
 
   player = new Audio()
 
   dados:any;
 
+
   constructor(private api:ApiService){
     this.api.Data().subscribe((data)=>{this.dados=data
       this.Tocar(this.dados)
     })
+
 
     this.player.addEventListener('timeupdate', () => this.updateProgress());
     this.player.addEventListener('loadedmetadata', () => this.updateDuration());

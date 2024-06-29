@@ -4,6 +4,7 @@ import { MuData } from '../../../models/musics.model';
 import { ApiService } from '../../services/api.service';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-song-content',
   templateUrl: './song-content.component.html',
@@ -15,20 +16,28 @@ export class SongContentComponent {
   morecomend$=new Observable<MuData[]>()
   morecomend:MuData[]=[]
 
+  songSelected:any;
+
   constructor(private api:ApiService , private route:ActivatedRoute , private router: Router){
-    this.getSong()
+
     this.morecomend$ = this.api.Data()
     this.morecomend$.subscribe(data =>{this.morecomend=data})
 
-  }
-
-  reloadPage(id:number){
-    this.router.navigate(['/song-content', id]).then(() => {
-      window.location.reload();
+    this.route.params.subscribe((params: Params) => {
+      const id = +params['id']; // "+" converte o parâmetro string para número
+      this.getSong(id);
     });
   }
-  getSong(){
-    const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.api.GetContent(id).subscribe((data)=>{this.song=data})
+
+  // GiveSong(song:MuData){
+  //   return
+  // }
+
+  reloadPage(id:number){
+    this.router.navigate(['/song-content', id])
+  }
+  getSong(id:number){
+    //const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.api.GetContent(id).subscribe((data)=>{this.song=data});
   }
 }

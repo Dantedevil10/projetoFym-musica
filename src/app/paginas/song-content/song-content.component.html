@@ -1,15 +1,19 @@
 <div class="content">
 
   <main>
-
-    <div class="img-con" *ngIf="song">
-      <img src={{song.Cover}} width="180px" height="180px" alt="">
-      <span>
-        <h1>{{song.Artist}}</h1>
-        <p><b>{{song.Title}}</b></p>
-        <p><b>{{song.Year}}</b></p>
-      </span>
-    </div>
+    <section class="f-1">
+      <div class="img-con" *ngIf="song">
+        <img src={{song.Cover}} width="180px" height="180px" alt="">
+        <span>
+          <h1>{{song.Artist}}</h1>
+          <p><b>{{song.Title}}</b></p>
+          <p><b>{{song.Year}}</b></p>
+        </span>
+      </div>
+      <div class="btn" *ngIf="song">
+        <button><img src="assets/ElementosdeTestes/PlaySele.png" width="30px" height="30px" alt=""></button>
+      </div>
+    </section>
 
     <section  class="c">
 

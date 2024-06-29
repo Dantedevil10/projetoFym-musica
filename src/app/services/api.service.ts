@@ -12,6 +12,7 @@ export class ApiService {
   constructor(private http:HttpClient) {
 
   }
+
   Data():Observable<MuData[]>{
    return this.http.get<MuData[]>(this.apiLink)
   }
