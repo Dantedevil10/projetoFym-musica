@@ -1,5 +1,7 @@
 import { Component,ViewChild,ElementRef} from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Observable } from 'rxjs';
+import { MuData } from '../../../models/musics.model';
 
 
 @Component({
@@ -20,18 +22,22 @@ export class FooterComponent {
   currtilt:any;
   currcov:any;
 
-  selectSong:number=0;
+  selectSong!:number;
 
   player = new Audio()
 
-  dados:any;
+  dados$=new Observable<MuData[]>()
+  dados:MuData[]=[];
 
 
   constructor(private api:ApiService){
-    this.api.Data().subscribe((data)=>{this.dados=data
-      this.Tocar(this.dados)
-    })
+    this.dados$ = this.api.Data()
+    this.dados$.subscribe(data=>this.dados=data)
 
+    this.api.getValor().subscribe(valor => {
+      this.selectSong = valor;
+      this.Tocar(this.dados);
+    });
 
     this.player.addEventListener('timeupdate', () => this.updateProgress());
     this.player.addEventListener('loadedmetadata', () => this.updateDuration());
@@ -40,10 +46,17 @@ export class FooterComponent {
   }
 
   Tocar(dados:any){
-    this.player.src=this.dados[this.selectSong].SongSrc
-    this.currart=this.dados[this.selectSong].Artist
-    this.currcov=this.dados[this.selectSong].Cover
-    this.currtilt=this.dados[this.selectSong].Title
+    if (dados && dados.length > 0) {
+      this.player.src=this.dados[this.selectSong].SongSrc
+      this.currart=this.dados[this.selectSong].Artist
+      this.currcov=this.dados[this.selectSong].Cover
+      this.currtilt=this.dados[this.selectSong].Title
+      if(this.player.paused){
+        this.player.play()
+        this.playorpause='assets/ElementosdeTestes/pause.png';
+      }
+
+    }
   }
 
   updateDuration() {

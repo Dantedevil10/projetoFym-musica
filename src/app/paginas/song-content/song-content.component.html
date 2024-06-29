@@ -10,8 +10,8 @@
           <p><b>{{song.Year}}</b></p>
         </span>
       </div>
-      <div class="btn" *ngIf="song">
-        <button><img src="assets/ElementosdeTestes/PlaySele.png" width="30px" height="30px" alt=""></button>
+      <div class="btn" *ngIf="song" (click)="GiveSong(song.id)">
+        <button (click)="GiveSong(song.id)"><img src="assets/ElementosdeTestes/PlaySele.png" width="30px" height="30px" alt=""></button>
       </div>
     </section>
 

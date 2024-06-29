@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { ActivatedRoute,Params,Router } from '@angular/router';
 import { MuData } from '../../../models/musics.model';
 import { ApiService } from '../../services/api.service';
 import { Observable } from 'rxjs';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -16,9 +17,11 @@ export class SongContentComponent {
   morecomend$=new Observable<MuData[]>()
   morecomend:MuData[]=[]
 
-  songSelected:any;
+  songSelected!:number;
 
-  constructor(private api:ApiService , private route:ActivatedRoute , private router: Router){
+  constructor(private api:ApiService , private route:ActivatedRoute , private router: Router,
+    private renderer: Renderer2
+  ){
 
     this.morecomend$ = this.api.Data()
     this.morecomend$.subscribe(data =>{this.morecomend=data})
@@ -29,9 +32,20 @@ export class SongContentComponent {
     });
   }
 
-  // GiveSong(song:MuData){
-  //   return
-  // }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.renderer.setProperty(window, 'scrollTo', [10, 10]);
+    }, 10);
+  }
+
+  GiveSong(id:number){
+    id = id-1
+    this.api.setValor(id)
+  }
+
+  sefude(){
+    window.scroll(10, 10);
+  }
 
   reloadPage(id:number){
     this.router.navigate(['/song-content', id])
