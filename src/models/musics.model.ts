@@ -4,5 +4,6 @@ export interface MuData{
   Artist:string,
   Year:string,
   Cover:string,
-  SongSrc:string
+  SongSrc:string,
+  MuPic:string
 }

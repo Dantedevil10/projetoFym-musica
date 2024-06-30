@@ -34,6 +34,10 @@ export class SongContentComponent {
     this.api.setValor(id)
   }
 
+  getBackgroundImage() {
+    return this.song ? { 'background-image': `url(${this.song.MuPic})` } : {};
+  }
+
   reloadPage(id:number){
     this.router.navigate(['/song-content', id])
     window.scrollTo(0,0)

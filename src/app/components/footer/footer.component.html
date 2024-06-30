@@ -1,11 +1,11 @@
 <div *ngIf="dados">
   <footer id="footer">
 
-    <div class="a-i">
+    <div class="a-i" >
       <img *ngIf="currcov" src={{currcov}} width="50px" height="50px" >
-      <span class="titles">
-        <p><b>{{currtilt}}</b></p>
-        <p id="ds">{{currart}}</p>
+      <span class="titles" *ngIf="currtilt&&currart">
+        <p><b>{{currtilt.length > 10 ? currtilt.slice(0, 11) + '...' : currtilt}}</b></p>
+        <p id="ds">{{currart.length > 10 ? currart.slice(0, 11) + '' : currart}}</p>
       </span>
     </div>
 
