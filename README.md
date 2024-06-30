@@ -1,27 +1,37 @@
-# Projetofym
+# Projeto FyM
+
+##Português BR
+
+Este Projeto Foi Gerado Com [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+
+## Screens Do Projeto
+![FyM - Google Chrome 30_06_2024 13_55_27](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/24d32626-9878-4145-a3b2-b2e5bf79bba9)
+![FyM - Google Chrome 30_06_2024 13_55_36](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/237de29d-e267-4581-a775-1b6a8f4a7e38)
+![FyM - Google Chrome 30_06_2024 13_55_49](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/0a140fb3-ff93-435a-a39e-8edd3a3f9ce2)
+![FyM - Google Chrome 30_06_2024 13_56_05](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/be771498-598f-4fba-96fb-13808d90003d)
+
+##Infos
+This Project Was Made With Angular , Typescript
+
+## Tecnologias
+Angular FrameWork
+TypeScript
+API's Consume
+
+##English
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
-## Development server
+## App Screen Shots
+![FyM - Google Chrome 30_06_2024 13_55_27](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/24d32626-9878-4145-a3b2-b2e5bf79bba9)
+![FyM - Google Chrome 30_06_2024 13_55_36](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/237de29d-e267-4581-a775-1b6a8f4a7e38)
+![FyM - Google Chrome 30_06_2024 13_55_49](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/0a140fb3-ff93-435a-a39e-8edd3a3f9ce2)
+![FyM - Google Chrome 30_06_2024 13_56_05](https://github.com/Dantedevil10/projetoFym-musica/assets/125316907/be771498-598f-4fba-96fb-13808d90003d)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##Infos
+This Project Was Made With Angular , Typescript
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies
+Angular FrameWork
+TypeScript
+API's Consume
